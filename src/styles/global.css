@@ -1,0 +1,125 @@
+/* 전역 스타일 리셋 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  min-width: 320px;
+  max-width: 600px;
+  width: 90%;
+}
+
+h1 {
+  color: white;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* 태블릿 스타일 */
+@media (max-width: 768px) {
+  .app {
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  body {
+    padding: 1rem;
+  }
+}
+
+/* 모바일 스타일 */
+@media (max-width: 480px) {
+  .app {
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 10px;
+    min-width: auto;
+    width: calc(100% - 1rem);
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  body {
+    padding: 0.5rem;
+  }
+}
+
+/* 대형 화면 스타일 */
+@media (min-width: 1200px) {
+  .app {
+    max-width: 800px;
+    padding: 3rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* 세로 방향 모바일 특별 처리 */
+@media (max-width: 480px) and (orientation: portrait) {
+  body {
+    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+  }
+
+  .app {
+    height: auto;
+    min-height: auto;
+  }
+}
+
+/* 가로 방향 모바일 특별 처리 */
+@media (max-width: 768px) and (orientation: landscape) {
+  .app {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+}
